@@ -1,6 +1,13 @@
-<h1>All Posts</h1>
+<header class="container">
+	<h1>All Posts</h1>
+</header>
 
-<% @posts.each do |post| %>
-  <h2><%= post.title%></h2>
-  <p><%= post.text %></p>
-<% end %>  
+<section class="container">
+	<% @posts.each do |post| %>
+	  <h2><%= post.title%></h2>
+	  <p><%= post.text %></p>
+	  <hr>
+	<% end %> 
+	
+	<%= link_to "New Post", new_post_path %>
+</section>

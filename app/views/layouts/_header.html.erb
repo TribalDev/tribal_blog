@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<nav class="navbar">
+		<ul class="nav">
+			<li class="nav-item">
+				<%= link_to "Home", root_path %>
+			</li>
+			<li class="nav-item">
+				<%= link_to "Blog", root_path %>
+			</li>
+			<li class="nav-item">
+				<%= link_to "About", "#" %>
+			</li>
+		</ul>
+	</nav>
