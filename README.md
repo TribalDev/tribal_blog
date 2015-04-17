@@ -1,6 +1,6 @@
 ##done
 
-post shoe and index
+post show and index
 
 ###TODO
 
