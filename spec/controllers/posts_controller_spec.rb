@@ -21,4 +21,24 @@ RSpec.describe PostsController, type: :controller do
     expect(response).to have_http_status(:success)
     expect(post_returned.title).to eq("a very specific post")
   end
+
+  it "returns a specific post" do
+    post = create(:post, title: "a very specific post")
+
+    get :show, id: post.id
+    post_returned = Post.find(post.id)
+
+    expect(response).to render_template(:show)
+    expect(response).to have_http_status(:success)
+    expect(post_returned.title).to eq("a very specific post")
+  end
+
+  it "creates a new post" do
+    post_params = {post: {title: "great title", text: "lorem ipsum blah, blah, blah, lorem ipsum, more blah..."}}
+
+    post :create, post_params
+    post_created = Post.last
+
+    expect(post_created.title).to eq("great title")
+  end
 end
