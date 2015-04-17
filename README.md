@@ -4,7 +4,6 @@ post show and index
 
 ###TODO
 
-- post create
 - post update
 - styling
 - navigation
