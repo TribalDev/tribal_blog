@@ -1,3 +1,30 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.form-block {
+	margin-bottom: 30px;
+
+	.form-input-label {
+		font-size: 1.5em;
+	}
+
+	.form-title,
+	.form-body {
+		width: 100%;
+		margin-top: 10px;
+	}
+
+	.form-title {
+		font-size: 1.3em;
+		border-top: 0;
+		border-right: 0;
+		border-left: 0;
+		padding: 5px 0;
+	}
+
+	.form-body {
+		font-size: 1em;
+		height: 150px;
+	}
+}
