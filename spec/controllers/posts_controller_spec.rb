@@ -52,4 +52,13 @@ RSpec.describe PostsController, type: :controller do
     expect(existing_post.title).to eq("edited title")
   end
 
+  it "deletes a post" do
+    unwanted_post = create(:post)
+
+    delete :destroy, id: unwanted_post.id
+    posts = Post.all
+
+    expect(posts.count).to eq(0)
+  end
+
 end
