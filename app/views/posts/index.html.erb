@@ -4,7 +4,7 @@
 </header>
 
 <section class="container">
-	<% @posts.reverse.each do |post| %>
+	<% @posts.each do |post| %>
 	  <h2><%= link_to post.title, post%></h2>
 	  <p class="date">Created <%= time_ago_in_words(post.created_at) %> ago</p>
 	  <p><%= post.text %></p>

@@ -4,6 +4,8 @@ class Post < ActiveRecord::Base
   validates :text, presence: true,
                     length: { minimum: 20}
 
+  default_scope -> {order('created_at DESC')}
+
   def self.calculate_pages
     posts_per_page = 10
     total_posts = Post.all.size
