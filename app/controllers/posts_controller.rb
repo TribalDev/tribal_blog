@@ -5,7 +5,7 @@ class PostsController < ApplicationController
     @next_page = page + 1
     @post_index = page - 1
     @total_pages = Post.calculate_pages
-    @posts = Post.limit(10).offset(@post_index * 10)
+    @posts = Post.paginate(@post_index, page)
   end
 
   def show

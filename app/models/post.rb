@@ -16,4 +16,8 @@ class Post < ActiveRecord::Base
     end
   end
 
+  def self.paginate(post_index, page)
+    Post.limit(10).offset(post_index * 10)
+  end
+
 end
