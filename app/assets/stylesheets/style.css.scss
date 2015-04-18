@@ -5,10 +5,14 @@ $gray: #777;
 
 
 body {
-	margin: 0;
+	margin: 50px 0 0 0;
 	font-family: sans-serif;
 	width: 100%;
-	color: $black;
+	color: $gray;
+}
+
+p {
+	font-size: 1.3em;
 }
 
 a {
@@ -26,8 +30,14 @@ a:hover {
 }
 
 .navbar {
-	background: $black;
+	background: white;
 	padding-right: 15px;
+	border-bottom: 1px solid $gray;
+	box-shadow: 1px 1px 10px $gray;
+	position: fixed;
+	width: 100%;
+	top: 0;
+
 
 	.nav {
 		list-style: none;
@@ -50,6 +60,10 @@ a:hover {
 			}
 		}
 	}
+}
+
+.page-title {
+	padding-top: 20px;
 }
 
 @media (max-width: 650px) {
