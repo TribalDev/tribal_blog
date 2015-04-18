@@ -1,5 +1,6 @@
 <header class="container">
 	<h1 class="page-title">All Posts</h1>
+	<%= link_to "New Post", new_post_path %>
 </header>
 
 <section class="container">
@@ -10,5 +11,13 @@
 	  <hr>
 	<% end %>
 
-	<%= link_to "New Post", new_post_path %>
+	<% unless @post_index == 0 %>
+		<%=link_to "previous page", posts_path(:page => @post_index) %>
+		&nbsp; &nbsp;
+	<% end %>
+
+	<% unless @next_page > @total_pages %>
+		<%=link_to "next page", posts_path(:page => @next_page) %>
+	<% end %>
+	<br><br><br>
 </section>

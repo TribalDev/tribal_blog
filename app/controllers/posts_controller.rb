@@ -1,7 +1,11 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.all
+    page = params[:page].try(:to_i) || 1
+    @next_page = page + 1
+    @post_index = page - 1
+    @total_pages = Post.calculate_pages
+    @posts = Post.limit(25).offset(@post_index * 10)
   end
 
   def show
