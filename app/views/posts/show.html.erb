@@ -4,7 +4,7 @@
 
 <section class="container">
 	<p class="date">Created <%= time_ago_in_words(@post.created_at) %> ago</p>
-	<p><%= @post.text %></p>
+	<p><%= markdown @post.text %></p>
   <br>
 	<%= link_to 'Edit', edit_post_path(@post) %>
   <br>
