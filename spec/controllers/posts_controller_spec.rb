@@ -41,4 +41,15 @@ RSpec.describe PostsController, type: :controller do
 
     expect(post_created.title).to eq("great title")
   end
+
+  it "updates a post" do
+    existing_post = create(:post)
+    post_params = {title: "edited title"}
+
+    put :update, id: existing_post.id, post: post_params
+    existing_post.reload
+
+    expect(existing_post.title).to eq("edited title")
+  end
+
 end

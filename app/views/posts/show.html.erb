@@ -1,9 +1,13 @@
+<header class="container">
+  <h2><%= @post.title %></h2>
+</header>
+
 <section class="container">
-	<h2><%= @post.title %></h2>
 	<p><%= @post.text %></p>
 
-	<%= link_to "Edit", edit_post_path %>
-	<br>
+  <br>
+	<%= link_to 'Edit', edit_post_path(@post) %>
+  <br>
 	<%= link_to "Delete", "#" %>
 	<br>
 	<%= link_to "Back Home", root_path %>
