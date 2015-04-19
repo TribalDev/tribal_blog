@@ -16,7 +16,14 @@
 </section>
 
 <section class="container comments">
-	<h2><%= @post.comments.count %> Comments</h2>
+
+	<% if @post.comments.count == 1 %>
+		<h2><%= @post.comments.count %> Comment</h2>
+	<% else %>
+		<h2><%= @post.comments.count %> Comments</h2>
+	<% end %>
+
+
 	<%= render @post.comments %>
 
 	<h3>Add a comment</h3>
