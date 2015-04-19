@@ -43,6 +43,8 @@
 			-webkit-appearance: none;
 			font-size: 1.3em;
 			background: white;
+			color: #777;
+			border-radius: 50px;
 		}
 	}
 }
@@ -58,4 +60,14 @@
 
 .kd {
 	font-size: 1em;
+}
+
+@media (max-width: 650px) {
+	.form {
+		.form-submit {
+			input[type~=submit] {
+				font-size: .9em;
+			}
+		}
+	}
 }
