@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   get 'pages/index'
   get 'pages/about'
+  get 'search' => 'posts#search', as: :search
 
   root 'pages#index'
 

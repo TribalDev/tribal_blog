@@ -1,0 +1,14 @@
+<section class="container">
+  <hr>
+  <% if @search_results.blank? %>
+    <p>Sorry, no results for that. Search for something else.</p>
+    <% else %>
+  <% @search_results.each do |post| %>
+    <h3><%= link_to post.title, post %></h3>
+    <small>
+      <%= truncate(post.text, :length => 90, :seperator => ' ...') %>
+    </small>
+    <hr>
+  <% end %>
+  <% end %>
+</section>

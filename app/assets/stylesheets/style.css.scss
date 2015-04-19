@@ -80,6 +80,10 @@ a:hover {
 	font-family: sans-serif;
 }
 
+.search-submit {
+	visibility: hidden;
+}
+
 .search:focus {
 	outline-style: none;
 }

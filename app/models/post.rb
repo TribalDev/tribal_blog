@@ -20,4 +20,10 @@ class Post < ActiveRecord::Base
     Post.limit(10).offset(post_index * 10)
   end
 
+  def self.search(query)
+    query_search = "%#{query.downcase}%"
+    results = Post.where('lower(title) LIKE ?', query_search) + Post.where('lower(text) LIKE ?', query_search)
+    results.uniq { |post| post.title }
+  end
+
 end
