@@ -62,6 +62,24 @@
 	font-size: 1em;
 }
 
+.next-pagination {
+	position: absolute;
+	right: 0;
+	border-radius: 0 100% 100% 0;
+	padding: 5px 30px 5px 15px;
+}
+
+.prev-pagination {
+	border-radius: 100% 0 0 100%;
+	padding: 5px 15px 5px 30px;
+}
+
+.prev-pagination,
+.next-pagination {
+	border: 1px solid gray;
+	letter-spacing: .3em;
+}
+
 @media (max-width: 650px) {
 	.form {
 		.form-submit {
