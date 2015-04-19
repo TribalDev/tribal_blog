@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, only: [:create, :destroy, :update]
 
   def index
     page = params[:page].try(:to_i) || 1
