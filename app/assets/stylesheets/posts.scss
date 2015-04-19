@@ -23,6 +23,10 @@
 		padding: 5px 0;
 	}
 
+	.form-title:focus {
+		outline-style: none;
+	}
+
 	.form-body {
 		font-size: 1em;
 		height: 150px;
