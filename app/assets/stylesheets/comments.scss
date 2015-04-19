@@ -8,9 +8,21 @@
 
 	.comment {
 		.comment-content {
+			width: 80%;
+			position: relative;
+			display: inline-block;
+			margin-right: 30px;
+
 			p {
 				font-size: 1em;
 			}
+		}
+
+		.delete {
+			display: inline-block;
+			position: absolute;
+			right: 0;
+			font-size: 1.2em;
 		}
 	}
 
@@ -51,4 +63,5 @@
 			}
 		}
 	}
+
 }
