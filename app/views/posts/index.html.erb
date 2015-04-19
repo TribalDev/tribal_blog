@@ -4,13 +4,13 @@
 </header>
 
 <section class="container">
-	<% @posts.each do |post| %>
-	  <h2><%= link_to post.title, post%></h2>
-	  <p class="date">Created <%= time_ago_in_words(post.created_at) %> ago</p>
-	  <p><%= markdown post.text %></p>
-    <p><%= link_to 'Edit', edit_post_path(post) %></p>
-	  <hr>
-	<% end %>
+		<% @posts.each do |post| %>
+		  <div class="post">
+			  <h2><%= link_to post.title, post%></h2>
+			  <p class="date">Created <%= time_ago_in_words(post.created_at) %> ago</p>
+			  <p>Author: The Creative Guru</p><hr>
+		  </div>
+		<% end %>
 
 	<% unless @post_index == 0 %>
 		<%=link_to "previous page", posts_path(:page => @post_index) %>
