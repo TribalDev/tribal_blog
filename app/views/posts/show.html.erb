@@ -24,8 +24,11 @@
 	<% end %>
 
 
-	<%= render @post.comments %>
+ 	<%= render @post.comments %>
 
-	<h3>Add a comment</h3>
-	<%= render 'comments/form' %>
+  <% if current_user %>
+  	<h3>Add a comment</h3>
+  	<%= render 'comments/form' %>
+  <% end %>
+
 </section>

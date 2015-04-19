@@ -3,8 +3,9 @@
 </header>
 
 <section class="container">
-
-	<%= render 'form' %>
+  <% if current_user %>
+	 <%= render 'form' %>
+  <% end %>
 
 	<%= link_to "Back Home", posts_path %>
 

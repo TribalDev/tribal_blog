@@ -1,9 +1,6 @@
 <div class="comment-form">
 	<%= form_for([@post, @post.comments.build]) do |f| %>
-		<div class="comment-form-block">
-			<%= f.label :name, class: "comment-form-name-label" %><br>
-			<%= f.text_field :name, class: "comment-form-name" %> 
-		</div>
+
 
 		<div class="comment-form-block">
 			<%= f.label :body, class: "comment form-body-label" %><br>
