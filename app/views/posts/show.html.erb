@@ -17,12 +17,7 @@
 
 <section class="container comments">
 
-	<% if @post.comments.count == 1 %>
-		<h2><%= @post.comments.count %> Comment</h2>
-	<% else %>
-		<h2><%= @post.comments.count %> Comments</h2>
-	<% end %>
-
+	<h3><%= pluralize(@post.comments.count, 'comment') %></h3>
 
  	<%= render @post.comments %>
 
