@@ -29,8 +29,31 @@
 
 	.form-body {
 		font-size: 1em;
-		height: 150px;
+		height: 300px;
 	}
+
+}
+
+.form {
+	.form-submit {
+		text-align: center;
+
+		input[type~=submit] {
+			width: 30%;
+			-webkit-appearance: none;
+			font-size: 1.3em;
+			background: white;
+		}
+	}
+}
+
+#error_explanation {
+	background: hsla(5, 99%, 50%, .2);
+	padding: 5px 20px;
+	margin-bottom: 10px;
+	border: 1px solid hsla(5, 99%, 50%, .8);
+	border-radius: 10px;
+	display: inline-block;
 }
 
 .kd {
