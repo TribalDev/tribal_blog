@@ -3,7 +3,7 @@
 </header>
 
 <section class="container">
-	<p class="date">Created <%= time_ago_in_words(@post.created_at) %> ago</p>
+	<p class="time">Created <%= time_ago_in_words(@post.created_at) %> ago</p>
 	<p><%= markdown @post.text %></p>
   <br>
 	<%= link_to 'Edit', edit_post_path(@post) %>
@@ -13,4 +13,19 @@
     data: { confirm: 'Are you sure you want to delete the post?'}%>
 	<br>
 	<%= link_to "Back Home", posts_path %>
+</section>
+
+<section class="container comments">
+
+	<% if @post.comments.count == 1 %>
+		<h2><%= @post.comments.count %> Comment</h2>
+	<% else %>
+		<h2><%= @post.comments.count %> Comments</h2>
+	<% end %>
+
+
+	<%= render @post.comments %>
+
+	<h3>Add a comment</h3>
+	<%= render 'comments/form' %>
 </section>
