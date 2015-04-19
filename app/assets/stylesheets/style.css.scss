@@ -23,6 +23,7 @@ a {
 .container {
 	width: 85%;
 	margin: 0 auto;
+	position: relative;
 }
 
 a:hover {
@@ -37,6 +38,7 @@ a:hover {
 	position: fixed;
 	width: 100%;
 	top: 0;
+	z-index: 1;
 
 
 	.nav {
@@ -92,9 +94,27 @@ a:hover {
 	padding-top: 20px;
 }
 
-.date {
-	font-size: 1em;
-	margin: 0;
+.post {
+	margin-bottom: 40px;
+
+	h2 {
+		margin-bottom: 5px;
+	}
+
+	p {
+		padding-bottom: 10px;
+	}
+
+	p,
+	.date {
+		font-size: 1em;
+		margin: 0;
+		display: inline-block;
+	}
+
+	.date {
+		margin-right: 50px;
+	}
 }
 
 @media (max-width: 650px) {
