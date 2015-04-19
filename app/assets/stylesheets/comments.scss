@@ -1,3 +1,40 @@
 // Place all the styles related to the Comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.comments {
+	.comment-form {
+		.comment-form-block {
+			margin-bottom: 25px;
+
+			.comment-form-name-label {
+
+			}
+
+			.comment-form-name {
+				width: 50%;
+				border-top: 0;
+				border-right: 0;
+				border-left: 0;
+			}
+
+			.comment-form-name:focus {
+				outline-style: none;
+			}
+
+			.comment-form-body-label {
+			}
+
+			.comment-form-body {
+				margin-top: 10px;
+				width: 50%;
+				height: 200px;
+			}
+
+			input[type~=submit] {
+
+			}
+		}
+	}
+}
