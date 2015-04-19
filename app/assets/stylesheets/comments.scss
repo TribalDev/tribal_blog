@@ -24,27 +24,30 @@
 			}
 
 			.comment-form-name {
-				width: 50%;
 				border-top: 0;
 				border-right: 0;
 				border-left: 0;
 			}
 
-			.comment-form-name:focus {
+			.comment-form-name,
+			.comment-form-body {
+				width: 50%;
+				font-size: 1.1em;
 				outline-style: none;
-			}
-
-			.comment-form-body-label {
 			}
 
 			.comment-form-body {
 				margin-top: 10px;
-				width: 50%;
 				height: 200px;
 			}
 
 			input[type~=submit] {
-
+				width: 15%;
+				-webkit-appearance: none;
+				font-size: 1em;
+				background: white;
+				color: #777;
+				border-radius: 50px;
 			}
 		}
 	}
