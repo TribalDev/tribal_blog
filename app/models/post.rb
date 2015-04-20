@@ -9,17 +9,6 @@ class Post < ActiveRecord::Base
   default_scope -> {order('created_at DESC')}
 
   def self.calculate_pages
-    posts_per_page = 10
-    posts = Post.all.size
-    rounded_pages = posts / posts_per_page
-    if posts % posts_per_page == 0
-      rounded_pages
-    else
-      (rounded_pages) + 1
-    end
-  end
-
-  def self.calculate_pages
     posts = Post.all.size
     posts_per_page = 10
     pages = posts / posts_per_page
