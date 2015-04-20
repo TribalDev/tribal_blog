@@ -10,11 +10,12 @@ class Post < ActiveRecord::Base
 
   def self.calculate_pages
     posts_per_page = 10
-    total_posts = Post.all.size
-    if total_posts % posts_per_page == 0
-      total_posts / 10
+    posts = Post.all.size
+    rounded_pages = posts / posts_per_page
+    if posts % posts_per_page == 0
+      rounded_pages
     else
-      (total_posts /10) +1
+      (rounded_pages) + 1
     end
   end
 
