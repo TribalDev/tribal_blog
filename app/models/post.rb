@@ -19,6 +19,14 @@ class Post < ActiveRecord::Base
     end
   end
 
+  def self.calculate_pages
+    posts = Post.all.size
+    posts_per_page = 10
+    pages = posts / posts_per_page
+    total_pages = pages if posts % posts_per_page == 0
+    total_pages ||= (pages) + 1
+  end
+
   def self.paginate(post_index, page)
     Post.limit(10).offset(post_index * 10)
   end
