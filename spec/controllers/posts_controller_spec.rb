@@ -1,6 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe PostsController, type: :controller do
+  include Devise::TestHelpers
+
+  before do
+    user = create(:user)
+    sign_in user
+  end
+
   it "lists an index of posts" do
     10.times { post = create(:post) }
 
