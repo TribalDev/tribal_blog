@@ -1,0 +1,3 @@
+$('#posts').append('<%= escape_javascript render partial: "post" %>');
+$('.pagination').replaceWith('<%= escape_javascript render partial: "paginate" %>');
+$('.prev-pagination').hide();

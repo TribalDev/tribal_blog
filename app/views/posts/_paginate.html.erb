@@ -1,0 +1,10 @@
+<div class="pagination">
+  <% unless @post_index == 0 %>
+    <%=link_to "prev", posts_path(:page => @post_index), class: "prev-pagination" %>
+    &nbsp; &nbsp;
+  <% end %>
+
+  <% unless @next_page > @total_pages %>
+    <%=link_to "next", posts_path(:page => @next_page), class: "next-pagination" %>
+  <% end %>
+</div>
