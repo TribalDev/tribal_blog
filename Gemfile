@@ -12,7 +12,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'kramdown'
 gem 'devise'
-
+gem 'pundit'
+gem "haml-rails", "~> 0.9"
 
 group :development, :test do
   gem 'sqlite3'
@@ -32,4 +33,3 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
-

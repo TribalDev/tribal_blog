@@ -1,0 +1,25 @@
+%br
+.container
+  %h2
+    all users
+    %hr
+  - @users.each do |user|
+    %p
+      name:
+      = user.name
+    %p
+      email:
+      = user.email
+    %p
+      Admin:
+      = user.role == "author"
+    %p
+      edit role?:
+      %h2
+      = form_for @user do |u|
+        .field
+          = u.label :role
+          %br/
+          = u.role :role, autofocus: true
+        .actions
+          = u.submit "Update"
