@@ -29,26 +29,50 @@ $electric-pink: #ee01aa;
 }
 
 #about {
-	text-align: center;
 	font-size: 4em;
+}
+
+#about,
+.mission,
+.card-holder,
+.card {
+	text-align: center
+}
+
+.card-holder {
+	width: 100%;
+	-webkit-perspective: 800px;
 }
 
 .card {
 	background: white;
-	text-align: center;
-	border: 2px solid #ddd;
-	padding: 10px;
-	box-shadow: 5px 5px 5px #ccc;
+	border: 1px solid #ccc;
 	display: inline-block;
 	border-radius: 10px;
 	width: 250px;
+	margin: 0 auto;
+	transition: -webkit-transform .5s ease-in;
+	-webkit-transform-style: preserve-3d;
+
+	.front,
+	.back {
+		-webkit-backface-visibility: hidden;
+	}
+
+	.front {
+		z-index: 100;
+	}
+
+	.back {
+		-webkit-transform: rotateY(-90deg);
+	}
 
 	img {
 		width: 100px;
+		margin-top: 30px;
 	}
 
-	h2,
-	h4 {
+	h2 {
 		width: 70%;
 		margin: 0 auto;
 	}
@@ -57,12 +81,25 @@ $electric-pink: #ee01aa;
 		margin-top: 10px;
 	}
 
-	h4,
 	p {
 		font-size: 1em;
 		color: #aaa;
+		margin-top: 0;
 	}
 
+	.card-front-text {
+		padding-bottom: 80px;
+		border-bottom: 1px solid #ddd;
+	}
+
+	.card-email {
+		margin-top: 10px;
+	}
+
+}
+
+.card:hover {
+	-webkit-transform: rotateY(-.5turn);
 }
 
 @media (max-width: 650px) {
