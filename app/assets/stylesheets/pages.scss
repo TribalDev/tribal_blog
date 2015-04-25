@@ -28,6 +28,43 @@ $electric-pink: #ee01aa;
 	}
 }
 
+#about {
+	text-align: center;
+	font-size: 4em;
+}
+
+.card {
+	background: white;
+	text-align: center;
+	border: 2px solid #ddd;
+	padding: 10px;
+	box-shadow: 5px 5px 5px #ccc;
+	display: inline-block;
+	border-radius: 10px;
+	width: 250px;
+
+	img {
+		width: 100px;
+	}
+
+	h2,
+	h4 {
+		width: 70%;
+		margin: 0 auto;
+	}
+
+	h2 {
+		margin-top: 10px;
+	}
+
+	h4,
+	p {
+		font-size: 1em;
+		color: #aaa;
+	}
+
+}
+
 @media (max-width: 650px) {
 	.hero {
 
