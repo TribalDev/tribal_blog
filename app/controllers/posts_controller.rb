@@ -11,15 +11,17 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @comments = @post.comments
   end
 
   def new
     @post = Post.new
+    authorize @post
   end
 
   def create
     @post = current_user.posts.new(post_params)
-
+    authorize @post
     if @post.save
       redirect_to @post
     else
@@ -29,11 +31,12 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
+    authorize @post
   end
 
   def update
     @post = Post.find(params[:id])
-
+    authorize @post
     if @post.update(post_params)
       redirect_to @post
     else

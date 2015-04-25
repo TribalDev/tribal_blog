@@ -6,24 +6,29 @@
 	<p class="time">Created <%= time_ago_in_words(@post.created_at) %> ago</p>
 	<p><%= markdown @post.text %></p>
   <br>
-	<%= link_to 'Edit', edit_post_path(@post) %>
-  <br>
-	<%= link_to "Delete", post_path(@post),
-    method: :delete,
-    data: { confirm: 'Are you sure you want to delete the post?'}%>
-	<br>
-	<%= link_to "Back Home", posts_path %>
+  <% if policy(@post).edit? %>
+  	<%= link_to 'Edit', edit_post_path(@post) %>
+    <br>
+  	<%= link_to "Delete", post_path(@post),
+      method: :delete,
+      data: { confirm: 'Are you sure you want to delete the post?'}%>
+	  <br>
+  <% end %>
+	<%= link_to "all posts", posts_path %>
 </section>
 
 <section class="container comments">
 
 	<h3><%= pluralize(@post.comments.count, 'comment') %></h3>
 
- 	<%= render @post.comments %>
+ 	<%= render partial: 'comments/comment', collection: @post.comments %>
 
-  <% if current_user %>
+  <% if policy(@post.comments).create? %>
   	<h3>Add a comment</h3>
-  	<%= render 'comments/form' %>
+    <% @comment ||= Comment.new %>
+  	<%= render partial: 'comments/form' %>
+  <% else %>
+  <%= link_to 'login to comment', new_user_session_path %>
   <% end %>
 
 </section>
