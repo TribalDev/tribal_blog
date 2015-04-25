@@ -53,6 +53,7 @@ $electric-pink: #ee01aa;
 	margin: 0 auto;
 	transition: -webkit-transform .5s ease-in;
 	-webkit-transform-style: preserve-3d;
+	margin-top: 5px;
 
 	.front,
 	.back {
@@ -102,7 +103,7 @@ $electric-pink: #ee01aa;
 	-webkit-transform: rotateY(-.5turn);
 }
 
-@media (max-width: 650px) {
+@media (max-width: 750px) {
 	.hero {
 
 		h1 {
@@ -112,5 +113,15 @@ $electric-pink: #ee01aa;
 		h4 {
 			font-size: 1em;
 		}
+	}
+
+	#about {
+		font-size: 2.5em;
+	}
+
+	.card {
+		display: block;
+		width: 100%;
+		margin: 25px 0;
 	}
 }
