@@ -21,11 +21,14 @@
 
 	<h3><%= pluralize(@post.comments.count, 'comment') %></h3>
 
- 	<%= render @post.comments %>
+ 	<%= render partial: 'comments/comment', collection: @post.comments %>
 
-  <% if current_user %>
+  <% if policy(@post.comments).create? %>
   	<h3>Add a comment</h3>
-  	<%= render 'comments/form' %>
+    <% @comment ||= Comment.new %>
+  	<%= render partial: 'comments/form' %>
+  <% else %>
+  <%= link_to 'login to comment', new_user_session_path %>
   <% end %>
 
 </section>

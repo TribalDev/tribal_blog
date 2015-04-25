@@ -1,15 +1,7 @@
-class PostPolicy < ApplicationPolicy
+class CommentPolicy < ApplicationPolicy
 
   def index?
     true
-  end
-
-  def create?
-    user.present? && user.author?
-  end
-
-  def new?
-    create?
   end
 
   def update?
@@ -23,6 +15,5 @@ class PostPolicy < ApplicationPolicy
   def destroy?
     update?
   end
-
 
 end

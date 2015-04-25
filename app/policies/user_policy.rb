@@ -1,7 +1,7 @@
 class UserPolicy < ApplicationPolicy
 
   def index?
-    user.author?
+    user.present? && user.author?
   end
 
   def update?
