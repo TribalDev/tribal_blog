@@ -15,6 +15,8 @@
 //= require turbolinks
 //= require_tree .
 
+
+
 $(document).ready(function() {
   if ($('.next-pagination').length) {
     $(window).scroll(function() {
@@ -26,4 +28,10 @@ $(document).ready(function() {
     });
     return $(window).scroll();
   }
+});
+
+$(document).on('page:change', function() {
+  $('.mobile-nav, .nav').click(function() {
+    $('.nav').toggleClass('mobile-menu-showing');
+  });
 });
