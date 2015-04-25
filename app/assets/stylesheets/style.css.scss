@@ -121,6 +121,42 @@ a:hover {
 	}
 }
 
+.auth_form {
+	margin-top: 15%;
+	text-align: center;
+
+	h2 {
+		font-size: 2.5em;
+	}
+
+	.label {
+		font-size: 1.6em;
+	}
+
+	.auth_input {
+		width: 50%;
+		font-size: 1.4em;
+		border-top: none;
+		border-right: none;
+		border-left: none;
+		margin-bottom: 15px;
+		text-align: center;
+	}
+
+	.auth_input:focus {
+		outline-style: none;
+	}
+
+	input[type~=submit] {
+		width: 30%;
+		-webkit-appearance: none;
+		font-size: 1.3em;
+		background: white;
+		color: #777;
+		border-radius: 50px;
+	}
+}
+
 @media (max-width: 650px) {
 	body {
 		margin-top: 45px;
