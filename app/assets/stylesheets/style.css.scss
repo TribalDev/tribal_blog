@@ -54,6 +54,9 @@ a:hover {
 	top: 0;
 	z-index: 1;
 
+	.mobile-nav {
+		display: none;
+	}
 
 	.nav {
 		list-style: none;
@@ -153,7 +156,11 @@ a:hover {
 	}
 }
 
+<<<<<<< HEAD
 @media (max-width: 750px) {
+=======
+@media (max-width: 670px) {
+>>>>>>> d79d716308029344f2cef5b287bf07cda1135229
 	body {
 		margin-top: 45px;
 	}
@@ -172,10 +179,37 @@ a:hover {
 
 	.navbar {
 		display: block;
-		text-align: center;
+		height: 2.8rem;
+
+		.mobile-nav {
+			display: inline;
+			margin-left: -7.5rem;
+			line-height: 2.9;
+			cursor: pointer;
+			&:hover {
+				color: #b96969;
+			}
+		}
 
 		.nav {
-			font-size: .9em;
+			padding: 2rem;
+			text-align: center;
+			font-size: 1rem;
+			float: left;
+			margin-top: 3.5rem;
+			background: #fff;
+			border-radius: 9px;
+			border: solid #5a5a5a 4px;
+			opacity: 0;
+
+			.nav-item {
+				display: block;
+			}
+		}
+
+		.mobile-menu-showing {
+			opacity: 1;
+			transition: all 200ms ease;
 		}
 
 		.nav-search-bar {
