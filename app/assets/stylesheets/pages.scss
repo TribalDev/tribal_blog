@@ -43,10 +43,10 @@ $electric-pink: #ee01aa;
 .card-holder {
 	width: 100%;
 	-webkit-perspective: 800px;
+	margin-bottom: 40px;
 }
 
 .card {
-	background: white;
 	border: 1px solid #ccc;
 	display: inline-block;
 	border-radius: 10px;
@@ -68,6 +68,29 @@ $electric-pink: #ee01aa;
 
 	.back {
 		-webkit-transform: rotateY(-180deg);
+		background: #f7f7f7;
+		position: absolute;
+		height: 100%;
+		margin-top: -132.5%;
+		border-radius: 10px;
+
+		.back-text {
+			width: 80%;
+			margin: 0 auto;
+		}
+
+		.back-bottom {
+			position: absolute;
+			bottom: 20px;
+			left: 0;
+			right: 0;
+			font-size: 1.5em;
+
+			span {
+				margin-left: 5px;
+				margin-right: 5px;
+			}
+		}
 	}
 
 	img {
