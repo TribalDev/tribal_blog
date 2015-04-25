@@ -1,4 +1,4 @@
-<section class="container auth_form">
+<section class="container auth-form">
   <h2>Sign up</h2>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -6,12 +6,12 @@
 
     <div class="field">
       <%= f.label :email, class: 'label' %><br />
-      <%= f.email_field :email, autofocus: true, class: 'auth_input' %>
+      <%= f.email_field :email, autofocus: true, class: 'auth-input text-line' %>
     </div>
 
     <div class="field">
       <%= f.label :name, class: 'label' %><br />
-      <%= f.text_field :name, class: 'auth_input' %>
+      <%= f.text_field :name, class: 'auth-input text-line' %>
     </div>
 
     <div class="field">
@@ -19,12 +19,12 @@
       <% if @validatable %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>
       <% end %><br />
-      <%= f.password_field :password, autocomplete: "off", class: 'auth_input' %>
+      <%= f.password_field :password, autocomplete: "off", class: 'auth-input text-line' %>
     </div>
 
     <div class="field">
       <%= f.label :password_confirmation, class: 'label' %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off", class: 'auth_input' %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", class: 'auth-input text-line' %>
     </div>
 
     <div class="actions">

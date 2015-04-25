@@ -20,6 +20,16 @@ a {
 	text-decoration: none;
 }
 
+.text-line {
+	border-top: none;
+	border-right: none;
+	border-left: none;
+}
+
+.text-line:focus {
+	outline-style: none;
+}
+
 .time {
 	font-size: 1em;
 }
@@ -77,9 +87,6 @@ a:hover {
 }
 
 .search {
-	border-top: 0;
-	border-left: 0;
-	border-right: 0;
 	font-size: 1em;
 	text-align: center;
 	color: $gray;
@@ -88,10 +95,6 @@ a:hover {
 
 .search-submit {
 	visibility: hidden;
-}
-
-.search:focus {
-	outline-style: none;
 }
 
 .page-title {
@@ -121,7 +124,7 @@ a:hover {
 	}
 }
 
-.auth_form {
+.auth-form {
 	margin-top: 15%;
 	text-align: center;
 
@@ -133,18 +136,11 @@ a:hover {
 		font-size: 1.6em;
 	}
 
-	.auth_input {
+	.auth-input {
 		width: 50%;
 		font-size: 1.4em;
-		border-top: none;
-		border-right: none;
-		border-left: none;
 		margin-bottom: 15px;
 		text-align: center;
-	}
-
-	.auth_input:focus {
-		outline-style: none;
 	}
 
 	input[type~=submit] {

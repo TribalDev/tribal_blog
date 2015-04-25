@@ -1,15 +1,15 @@
-<section class="container auth_form">
+<section class="container auth-form">
   <h2>Log in</h2>
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">
       <%= f.label :email, class: 'label' %><br />
-      <%= f.email_field :email, autofocus: true, class: 'auth_input' %>
+      <%= f.email_field :email, autofocus: true, class: 'auth-input text-line' %>
     </div>
 
     <div class="field">
       <%= f.label :password, class: 'label' %><br />
-      <%= f.password_field :password, autocomplete: "off", class: 'auth_input' %>
+      <%= f.password_field :password, autocomplete: "off", class: 'auth-input text-line' %>
     </div>
 
     <% if devise_mapping.rememberable? -%>
