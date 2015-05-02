@@ -39,8 +39,10 @@ $(document).on('page:change', function() {
 $(document).on("scroll",function(){
   if($(document).scrollTop()>80){
     $("nav").addClass("navbar-scroll");
+    $(".nav-logo").addClass("nav-logo-showing");
   }
   else{
     $("nav").removeClass("navbar-scroll");
+    $(".nav-logo").addClass("nav-logo-showing");
   }
 });

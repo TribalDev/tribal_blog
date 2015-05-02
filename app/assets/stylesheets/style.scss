@@ -55,11 +55,15 @@ a:hover {
 		display: none;
 	}
 
+	.nav-logo {
+			font-size: 0rem;
+		}
+
 	.nav {
 		list-style: none;
 		padding: 0;
 		font-size: 1.1em;
-		margin: 0 0 0 25px;
+		margin: 0 0 0 5px;
 		display: inline-block;
 		.nav-item {
 			display: inline-block;
@@ -96,10 +100,17 @@ a:hover {
 	transition: all 300ms ease;
 	background-color: $color-dark;
 	color: $color-main;
-	box-shadow: 1px 1px 10px $gray;
+	box-shadow: 1px 1px 10px #29343B;
 
 	.nav-item a {
 		color: $color-main !important;
+	}
+
+	.nav-logo-showing {
+		margin-left: 1rem;
+		font-size: 1.4rem;
+		color: #4b6a73;
+		font-family: $font-styled;
 	}
 }
 
@@ -185,6 +196,15 @@ footer {
 }
 
 @media (max-width: 750px) {
+	.nav-logo-showing {
+		float: right;
+		margin-top: 6px;
+		margin-right: 1rem;
+		font-size: 1.4rem;
+		color: $gray;
+		font-family: $font-styled;
+	}
+
 	body {
 		margin-top: 45px;
 	}
@@ -224,7 +244,7 @@ footer {
 			float: left;
 			margin-top: 3.5rem;
 			border-radius: 9px;
-			border: solid $color-muted 4px;
+			border: solid $gray 4px;
 			opacity: 0;
 
 			.nav-item {
@@ -234,7 +254,7 @@ footer {
 		}
 
 		.mobile-menu-showing {
-			background: $white;
+			background: $color-dark;
 			opacity: 1;
 			transition: all 200ms ease;
 		}
