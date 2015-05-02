@@ -85,7 +85,7 @@ a:hover {
 	}
 
 	.nav-search-bar input {
-		background-color: #e5e5e5;
+		background-color: $light-gray;
 		border-radius: 2px;
 		padding: 5px;
 	}
@@ -93,7 +93,7 @@ a:hover {
 }
 
 nav.navbar {
-  background-color: #29343B;
+  background-color: $color-dark;
   color: $color-main;
 }
 
@@ -164,13 +164,13 @@ nav.navbar {
 		-webkit-appearance: none;
 		font-size: 1.3em;
 		background: white;
-		color: #777;
+		color: $gray;
 		border-radius: 50px;
 	}
 }
 
 footer {
-	background-color: #29343B;
+	background-color: $color-dark;
 	color: $color-main;
 	margin-top: 50px;
 	padding-top: 50px;
@@ -205,7 +205,7 @@ footer {
 			line-height: 2.9;
 			cursor: pointer;
 			&:hover {
-				color: #b96969;
+				color: $light-gray;
 			}
 		}
 
@@ -215,9 +215,9 @@ footer {
 			font-size: 1rem;
 			float: left;
 			margin-top: 3.5rem;
-			background: #fff;
+			background: $white;
 			border-radius: 9px;
-			border: solid #5a5a5a 4px;
+			border: solid $color-muted 4px;
 			opacity: 0;
 
 			.nav-item {
