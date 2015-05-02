@@ -17,6 +17,24 @@ a {
 	text-decoration: none;
 }
 
+.center {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.button {
+	border-radius: 6px;
+	border: 1px solid $color-main;
+	color: $color-main;
+	padding: 1rem;
+	transition: all 230ms ease;
+	&:hover {
+		background: $color-main;
+		color: $white;
+		text-decoration: none;
+	}
+}
+
 .text-line {
 	border-top: none;
 	border-right: none;
