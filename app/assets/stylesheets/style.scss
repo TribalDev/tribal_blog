@@ -1,10 +1,5 @@
 @import "variables";
 
-$black: #515151;
-$white: #f7f7f7;
-$light-gray: #f3f3f3;
-$gray: #777;
-
 body {
 	margin: 50px 0 0 0;
 	line-height: 1.6;
@@ -73,7 +68,6 @@ a:hover {
 			a {
 				display: block;
 				padding: 15px 15px;
-				color: $gray;
 			}
 
 			a:hover {
@@ -100,11 +94,11 @@ a:hover {
 
 nav.navbar {
   background-color: #29343B;
-  color: #ee01aa;
+  color: $color-main;
 }
 
 .navbar .nav .nav-item a{
-  color: #ee01aa;
+  color: $color-main;
 }
 
 
@@ -177,7 +171,7 @@ nav.navbar {
 
 footer {
 	background-color: #29343B;
-	color: #ee01aa;
+	color: $color-main;
 	margin-top: 50px;
 	padding-top: 50px;
 	text-align: center;
