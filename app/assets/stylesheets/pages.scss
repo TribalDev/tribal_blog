@@ -49,6 +49,7 @@
 	width: 100%;
 	max-width: 1000px;
 	-webkit-perspective: 800px;
+	margin: 0 auto 40px auto;
 	margin-bottom: 40px;
 }
 
@@ -78,7 +79,7 @@
 		background: #f7f7f7;
 		position: absolute;
 		height: 100%;
-		margin-top: -132.5%;
+		margin-top: -143.1%;
 		border-radius: 10px;
 		width: 100%;
 
@@ -124,6 +125,10 @@
 		font-size: 1em;
 		color: #aaa;
 		margin-top: 0;
+	}
+
+	.styled-text {
+		font-family: $font-styled;
 	}
 
 	.card-front-text {

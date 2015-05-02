@@ -32,6 +32,7 @@ a {
 }
 
 .container {
+	padding-top: 1em;
 	width: 85%;
 	margin: 0 auto;
 	position: relative;
@@ -115,7 +116,7 @@ a:hover {
 }
 
 .page-title {
-	padding-top: 3em;
+	padding-top: 1em;
 }
 
 .post {
@@ -177,6 +178,10 @@ footer {
 	padding-top: 50px;
 	text-align: center;
 	height: 100px
+}
+
+.spacer {
+	margin-top: 2rem;
 }
 
 @media (max-width: 750px) {
