@@ -1,7 +1,7 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('icons/icomoon.eot?-ayeua6');
-	src:url('icons/icomoon.eot?#iefix-ayeua6') format('embedded-opentype'),
+	src: font-url('icons/icomoon.eot?-ayeua6');
+	src: font-url('icons/icomoon.eot?#iefix-ayeua6') format('embedded-opentype'),
 		url('icons/icomoon.woff?-ayeua6') format('woff'),
 		url('icons/icomoon.ttf?-ayeua6') format('truetype'),
 		url('icons/icomoon.svg?-ayeua6#icomoon') format('svg');
@@ -198,4 +198,3 @@
 .icon-opera:before {
 	content: "\eae8";
 }
-
