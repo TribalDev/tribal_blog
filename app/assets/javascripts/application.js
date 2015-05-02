@@ -35,3 +35,12 @@ $(document).on('page:change', function() {
     $('.nav').toggleClass('mobile-menu-showing');
   });
 });
+
+$(document).on("scroll",function(){
+  if($(document).scrollTop()>80){
+    $("nav").addClass("navbar-scroll");
+  }
+  else{
+    $("nav").removeClass("navbar-scroll");
+  }
+});
