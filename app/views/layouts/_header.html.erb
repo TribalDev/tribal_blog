@@ -14,7 +14,9 @@
     </span>
 		<ul class="nav">
 			<li class="nav-item">
-				<%= link_to "Home", root_path %>
+				<%= link_to root_path do %>
+					<span class="icon-home"></span>
+				<% end %>
 			</li>
 			<li class="nav-item">
 				<%= link_to "Blog", posts_path %>
@@ -33,7 +35,7 @@
 		</ul>
 		<div class="nav-search-bar">
       <form action="/search" method="get">
-  			<label for="search">Search</label>
+  			<label for="search"><span class="icon-search" style="margin-right: 5px; font-size: 1.2em;"></span></label>
   			<input type="text" id="search" name="query" class="search text-line">
         <input type="submit" value="Go" class='search-submit'>
       </form>
