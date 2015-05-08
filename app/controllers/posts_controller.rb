@@ -20,7 +20,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @category = Category.find_or_create_by(title: category_params[:category])
+    @category = Category.normalize_tag(category_params)
     @post = current_user.posts.new(post_params)
     @post.category = @category
     authorize @post

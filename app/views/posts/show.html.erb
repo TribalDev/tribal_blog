@@ -3,7 +3,7 @@
     <% if @post.category %>
       <%= link_to category_path(@post.category) do %>
         <small class='category-sub'>
-          #<%= @post.category.title %>
+          #<%= @post.category.topic %>
         </small>
       <% end %>
     <% end %>
