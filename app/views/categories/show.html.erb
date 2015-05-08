@@ -1,0 +1,12 @@
+<div class="spacer"></div>
+<div class="container">
+  <h2><%= @category.title %> </h2>
+  <hr>
+  <% @category.posts.each do |p| %>
+    <%= link_to post_path(p) do %>
+      <p><%= p.title %></p>
+    <% end %>
+    <small><%= p.text %></small>
+    <hr>
+  <% end %>
+</div>

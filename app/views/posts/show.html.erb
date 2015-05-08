@@ -1,6 +1,15 @@
 <header class="container">
-  <h2 class="page-title"><%= @post.title %></h2>
+  <h2 class="page-title"><%= @post.title %>
+    <% if @post.category %>
+      <%= link_to category_path(@post.category) do %>
+        <small class='category-sub'>
+          #<%= @post.category.title %>
+        </small>
+      <% end %>
+    <% end %>
+  </h2>
 </header>
+
 
 <section class="container">
 	<p class="time">Created <%= time_ago_in_words(@post.created_at) %> ago</p>

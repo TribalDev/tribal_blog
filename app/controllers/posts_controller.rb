@@ -20,7 +20,9 @@ class PostsController < ApplicationController
   end
 
   def create
+    @category = Category.find_or_create_by(title: category_params[:category])
     @post = current_user.posts.new(post_params)
+    @post.category = @category
     authorize @post
     if @post.save
       redirect_to @post
@@ -58,6 +60,10 @@ class PostsController < ApplicationController
   private
   def post_params
     params.require(:post).permit(:title, :text)
+  end
+
+  def category_params
+    params.require(:post).permit(:category)
   end
 
 end
