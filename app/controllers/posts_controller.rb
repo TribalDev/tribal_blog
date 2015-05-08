@@ -38,6 +38,8 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
+    @category = Category.normalize_tag(category_params)
+    @post.category = @category
     authorize @post
     if @post.update(post_params)
       redirect_to @post
