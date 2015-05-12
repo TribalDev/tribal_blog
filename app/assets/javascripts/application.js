@@ -46,3 +46,16 @@ $(document).on("scroll",function(){
     $(".nav-logo").addClass("nav-logo-showing");
   }
 });
+
+
+$(window).scroll(function(){
+  var wScroll = $(this).scrollTop();
+  var $mainTitle = $("#main-title");
+  var opacity = (($mainTitle.offset().top - wScroll) / wScroll);
+  if(opacity <= 1 && opacity >= 0) {
+    $mainTitle.css('opacity', opacity);
+  } else if (opacity > 1) {
+    $mainTitle.css('opacity', 1);
+  }
+  
+});
