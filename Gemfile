@@ -14,6 +14,8 @@ gem 'kramdown'
 gem 'devise'
 gem 'pundit'
 gem "haml-rails", "~> 0.9"
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :development, :test do
   gem 'sqlite3'
