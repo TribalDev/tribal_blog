@@ -15,14 +15,13 @@ class PostsController < ApplicationController
   end
 
   def new
+    @category = Category.new
     @post = Post.new
     authorize @post
   end
 
   def create
-    @category = Category.normalize_tag(category_params)
     @post = current_user.posts.new(post_params)
-    @post.category = @category
     authorize @post
     if @post.save
       redirect_to @post
@@ -33,13 +32,12 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
+    @category = Category.find(@post.category.id)
     authorize @post
   end
 
   def update
     @post = Post.find(params[:id])
-    @category = Category.normalize_tag(category_params)
-    @post.category = @category
     authorize @post
     if @post.update(post_params)
       redirect_to @post
@@ -61,11 +59,11 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:title, :text)
+    params.require(:post).permit(:title, :text, category_attributes: [:id, :topic, :_destroy])
   end
 
-  def category_params
-    params.require(:post).permit(:category)
-  end
+  # def category_params
+  #   post_params[:category_attributes][:topic]
+  # end
 
 end

@@ -25,8 +25,10 @@
     </div>
 
     <div class="form-block">
-      <label>Category:</label><br>
-      <%= f.text_field :category, class: 'form-title text-line' %>
+      <label>Category:</label>
+      <%= f.fields_for :category, @category do |category_form| %>
+        <%= category_form.text_field :topic, class: 'form-title text-line' %>
+      <% end %>
     </div>
 
     <p class="kd">This form supports Kramdown syntax. <%= link_to 'Kramdown Quick Reference', 'http://kramdown.gettalong.org/quickref.html', target: "_blank" %></p>
