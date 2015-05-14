@@ -16,6 +16,7 @@ gem 'pundit'
 gem "haml-rails", "~> 0.9"
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'fog'
 gem "nested_form"
 
 group :development, :test do
