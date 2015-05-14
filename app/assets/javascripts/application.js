@@ -22,7 +22,7 @@ $(document).ready(function() {
   if ($('.next-pagination').length) {
     $(window).scroll(function() {
       var url = $('.next-pagination').attr('href');
-      if (url && $(window).scrollTop() > $(document).height() - $(window).height() - 70) {
+      if (url && $(window).scrollTop() > $(document).height() - $(window).height() - 200) {
         $('.pagination').text("Please Wait...");
         return $.getScript(url);
       }
