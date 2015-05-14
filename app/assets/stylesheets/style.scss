@@ -1,5 +1,9 @@
 @import "variables";
 
+hr {
+	width: 88%;
+}
+
 html {
 	height: 100%;
 	position: relative;
@@ -145,7 +149,6 @@ a:hover {
 		font-family: $font-styled;
 	}
 }
-
 
 .search {
 	font-size: 1em;
