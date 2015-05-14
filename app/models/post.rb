@@ -1,6 +1,7 @@
 class Post < ActiveRecord::Base
   belongs_to :user
   belongs_to :category
+  has_many :images
   accepts_nested_attributes_for :category
   has_many :comments, dependent: :destroy
   validates_presence_of :category
