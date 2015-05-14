@@ -17,6 +17,7 @@ gem "haml-rails", "~> 0.9"
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
+gem 'figaro'
 gem "nested_form"
 
 group :development, :test do

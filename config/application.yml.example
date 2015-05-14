@@ -1,0 +1,8 @@
+#for this app to function with image uploading, you would need to put the proper credentials in here (uncommenting the necessary lines) and rename this file to application.yml
+
+#AWS_ACCESS_KEY_ID: your credential here
+#AWS_SECRET_ACCESS_KEY: your credential here
+#development:
+  #AWS_BUCKET: your credential here
+#production:
+  #AWS_BUCKET: your credential here
