@@ -17,8 +17,13 @@
 //= require_tree .
 
 
+$(document).on('page:change', function() {
+  // Mobile-nav
+  $('.mobile-nav, .nav').click(function() {
+    $('.nav').toggleClass('mobile-menu-showing');
+  });
 
-$(document).ready(function() {
+  // Infinite Scroll
   if ($('.next-pagination').length) {
     $(window).scroll(function() {
       var url = $('.next-pagination').attr('href');
@@ -31,13 +36,8 @@ $(document).ready(function() {
   }
 });
 
-$(document).on('page:change', function() {
-  $('.mobile-nav, .nav').click(function() {
-    $('.nav').toggleClass('mobile-menu-showing');
-  });
-});
-
 $(document).on("scroll",function(){
+  // Transtition nav-bar on scroll
   if($(document).scrollTop()>80){
     $("nav").addClass("navbar-scroll");
     $(".nav-logo").addClass("nav-logo-showing");
