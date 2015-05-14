@@ -1,4 +1,4 @@
 class Image < ActiveRecord::Base
   belongs_to :post
-  mount_uploader :image, ImageUploader
+  mount_uploader :url, ImageUploader
 end

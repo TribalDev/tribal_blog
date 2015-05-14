@@ -1,4 +1,4 @@
-<%= form_for @post do |f| %>
+<%= nested_form_for @post do |f| %>
   <div class="form">
     <% if @post.errors.any? %>
       <div id="error_explanation">
@@ -28,6 +28,27 @@
       <label>Category:</label>
       <%= f.fields_for :category, @category do |category_form| %>
         <%= category_form.text_field :topic, class: 'form-title text-line' %>
+      <% end %>
+    </div>
+
+    <div class="form-block">
+      <%= f.fields_for :images do |images_form| %>
+        <%= images_form.file_field :url %>
+        <%= images_form.link_to_remove "Remove this image" %>
+      <% end %>
+      <p> <%= f.link_to_add "Add an image", :images %> </p>
+    </div>
+
+    <div class="images">
+      <%= @post.images.each do |image| %>
+        <p>
+          <%= image_tag(image.url) %>
+          <br>
+          <span> &nbsp; link: &nbsp; ![img](
+            <%= image.url %>
+            )
+          </span>
+        </p>
       <% end %>
     </div>
 
