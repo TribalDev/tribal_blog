@@ -3,6 +3,7 @@ class Post < ActiveRecord::Base
   belongs_to :category
   has_many :images
   accepts_nested_attributes_for :category
+  accepts_nested_attributes_for :image
   has_many :comments, dependent: :destroy
   validates_presence_of :category
   validates :title, presence: true,
