@@ -24,7 +24,11 @@ class PostsController < ApplicationController
     @post = current_user.posts.new(post_params)
     authorize @post
     if @post.save
-      redirect_to @post
+      if @post.images.any?
+        redirect_to edit_post_path(@post)
+      else
+        redirect_to @post
+      end
     else
       render 'new'
     end

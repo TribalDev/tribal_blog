@@ -1,9 +1,5 @@
 @import "variables";
 
-hr {
-	width: 88%;
-}
-
 html {
 	height: 100%;
 	position: relative;
@@ -35,6 +31,11 @@ a {
 	color: #B7B8B8;
 }
 
+.rounded {
+	border-radius: .5em;
+	border: 2px solid #FDD6FF
+}
+
 .center {
 	text-align: center;
 	margin: 0 auto;
@@ -51,6 +52,20 @@ a {
 		color: $white;
 		text-decoration: none;
 	}
+}
+
+.small-button {
+	padding: .3rem;
+	font-size: .8rem;
+}
+
+.medium-button {
+	padding: .3rem;
+	font-size: 1rem;
+}
+
+.spacer-small {
+	margin-top: .4rem;
 }
 
 .text-line {

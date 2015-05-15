@@ -9,6 +9,12 @@
 		font-size: 1.5em;
 	}
 
+	.form-small-text {
+		width: 100%;
+		font-size: .9em;
+		color: #FCB7FB;
+	}
+
 	.form-title,
 	.form-body {
 		width: 100%;
@@ -47,6 +53,10 @@
 	}
 }
 
+.small {
+	font-size: .8rem;
+}
+
 #error_explanation {
 	background: hsla(5, 99%, 50%, .2);
 	padding: 5px 20px;
@@ -58,6 +68,10 @@
 
 .kd {
 	font-size: 1em;
+}
+
+.highlight {
+	color: #DF3E80;
 }
 
 .next-pagination {
