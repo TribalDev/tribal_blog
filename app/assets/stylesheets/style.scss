@@ -313,7 +313,7 @@ a:hover {
 			text-align: center;
 			font-size: 1rem;
 			float: left;
-			margin-top: 3.5rem;
+			margin-top: -18rem;
 			border-radius: 9px;
 			border: solid $gray 4px;
 			opacity: 0;
@@ -325,6 +325,7 @@ a:hover {
 		}
 
 		.mobile-menu-showing {
+			margin-top: 3.5rem;
 			background: $color-dark;
 			opacity: 1;
 			transition: all 200ms ease;
