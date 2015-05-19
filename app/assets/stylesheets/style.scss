@@ -267,6 +267,13 @@ a:hover {
 }
 
 @media (max-width: 750px) {
+
+	.post-box img {
+		width :80%;
+		margin: 0 auto;
+		display: block;
+	}
+
 	.nav-logo-showing {
 		float: right;
 		margin-top: 6px;
