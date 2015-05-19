@@ -21,7 +21,7 @@ p {
 }
 
 a {
-	color: #DA93DD;
+	color: #EE3EAC;
 	text-decoration: none;
 }
 
@@ -54,6 +54,20 @@ a {
 	}
 }
 
+input[type=submit] {
+	border-radius: 6px;
+	background: #fff;
+	border: 1px solid $color-main;
+	color: $color-main;
+	padding: 1rem;
+	transition: all 230ms ease;
+	&:hover {
+		background: $color-main;
+		color: $white;
+		text-decoration: none;
+	}
+}
+
 .small-button {
 	padding: .3rem;
 	font-size: .8rem;
@@ -63,6 +77,8 @@ a {
 	padding: .3rem;
 	font-size: 1rem;
 }
+
+
 
 .spacer-small {
 	margin-top: .4rem;
@@ -187,9 +203,13 @@ a:hover {
 }
 
 .post {
-	margin-bottom: 40px;
+	display: inline-block;
+	padding: 1em;
+	margin: 1em;
+	background: whitesmoke;
 
 	h2 {
+		font-size: 1.2em;
 		margin-bottom: 5px;
 	}
 
@@ -235,15 +255,6 @@ a:hover {
 		font-size: 1.4em;
 		margin-bottom: 15px;
 		text-align: center;
-	}
-
-	input[type~=submit] {
-		width: 30%;
-		-webkit-appearance: none;
-		font-size: 1.3em;
-		background: white;
-		color: $gray;
-		border-radius: 50px;
 	}
 }
 

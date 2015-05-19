@@ -33,24 +33,9 @@
 }
 
 .post-box {
-	background: #F0F0F0;
+	background: #FAFAFA;
 	border-radius: .8rem;
 	padding: 1.3rem 1.5rem;
-}
-
-.form {
-	.form-submit {
-		text-align: center;
-
-		input[type~=submit] {
-			width: 30%;
-			-webkit-appearance: none;
-			font-size: 1.3em;
-			background: white;
-			color: #777;
-			border-radius: 50px;
-		}
-	}
 }
 
 .small {
@@ -100,15 +85,5 @@
 	span {
 		display: block;
 		font-size: 10em;
-	}
-}
-
-@media (max-width: 750px) {
-	.form {
-		.form-submit {
-			input[type~=submit] {
-				font-size: .9em;
-			}
-		}
 	}
 }
