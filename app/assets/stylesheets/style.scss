@@ -209,6 +209,15 @@ a:hover {
 	}
 }
 
+.comment-controls {
+	display: inline-block;
+
+	a {
+		display: inline-block;
+		margin-right: 5px;
+	}
+}
+
 .auth-form {
 	margin-top: 15%;
 	text-align: center;
