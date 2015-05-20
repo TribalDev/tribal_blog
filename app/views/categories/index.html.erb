@@ -1,0 +1,7 @@
+<section class="container" style="margin-top: 100px;">
+	<% @categories.each do |category| %>
+		<% unless category.posts.empty? %>
+			<li><%= link_to category.topic, category_path(category.id) %></li>
+		<% end %>
+	<% end %>
+</section>
