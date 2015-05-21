@@ -1,9 +1,10 @@
 <header class="container spacer">
-	<h1 class="page-title">All Posts</h1>
-	<% if policy(Post.new).create? %>
-		<%= link_to "New Post", new_post_path %>
-	<% end %>
+	<h1 class="page-title blog-title styled-text">All Posts</h1>
 </header>
+
+<% if policy(Post.new).create? %>
+	<%= link_to "New Post", new_post_path, class: 'new-post' %>
+<% end %>
 
 <section class="container">
 	<%= render partial: "post" %>

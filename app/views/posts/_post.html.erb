@@ -1,7 +1,13 @@
 <div id="posts">
   <% @posts.each do |post| %>
     <div class="post">
-      <h2><%= link_to post.title, post%></h2>
+      <h2>
+        <% if post.title.length > 20 %>
+          <%= link_to post.title[0..19] + " ...", post%>
+        <% else %>
+          <%= link_to post.title, post%>
+        <% end %>
+      </h2>
       <hr>
       <h4><%= post.category.topic %></h4>
       <small>Author: <%= post.user.name %></small>

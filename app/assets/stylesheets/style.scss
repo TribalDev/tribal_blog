@@ -192,10 +192,22 @@ a:hover {
 	visibility: hidden;
 }
 
+.new-post {
+	position: absolute;
+	top: 40px;
+	right: 20px;
+}
+
 .page-title {
 	padding-top: 1em;
 	margin-bottom: 0;
 	font-size: 3em;
+}
+
+.blog-title {
+	text-align: center;
+	font-size: 5em;
+	margin-top: -25px;
 }
 
 .time {
@@ -207,6 +219,10 @@ a:hover {
 	padding: 1em;
 	margin: 1em;
 	background: whitesmoke;
+	border-radius: 10px;
+	width: 40%;
+	border: 1px solid #bbb;
+	box-shadow: 3px 3px 5px #ddd;
 
 	h2 {
 		font-size: 1.2em;
@@ -275,6 +291,12 @@ a:hover {
 
 .spacer {
 	margin-top: 2rem;
+}
+
+@media (max-width: 804px) {
+	.post {
+		width: 90%;
+	}
 }
 
 @media (max-width: 750px) {
@@ -358,5 +380,9 @@ a:hover {
 		.nav-search-bar {
 			display: none;
 		}
+	}
+
+	.new-post {
+		display: none;
 	}
 }
