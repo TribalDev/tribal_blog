@@ -1,4 +1,7 @@
 Rails.application.configure do
+
+  config.assets.precompile += %w( tinymce/plugins/uploadimage/plugin.js tinymce/plugins/uploadimage/langs/en.js )
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
