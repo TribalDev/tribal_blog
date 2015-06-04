@@ -1,0 +1,6 @@
+toolbar:
+  - styleselect | bold italic underline | bullist numlist outdent indent | undo redo
+  - uploadimage | link
+plugins:
+  - uploadimage
+  - link

@@ -16,7 +16,7 @@
 	<p><%= markdown @post.text %></p>
   <br>
   <% if policy(@post).edit? %>
-  	<%= link_to 'Edit', edit_post_path(@post) %>
+  	<%= link_to 'Edit', edit_post_path(@post), data: { no_turbolink: true } %>
     <br>
   	<%= link_to "Delete", post_path(@post),
       method: :delete,

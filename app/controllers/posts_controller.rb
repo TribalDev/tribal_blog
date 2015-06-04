@@ -24,11 +24,7 @@ class PostsController < ApplicationController
     @post = current_user.posts.new(post_params)
     authorize @post
     if @post.save
-      if @post.images.any?
-        redirect_to edit_post_path(@post)
-      else
-        redirect_to @post
-      end
+      redirect_to @post
     else
       render 'new'
     end
@@ -63,7 +59,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:title, :text, category_attributes: [:id, :topic, :_destroy], images_attributes: [:id, :url, :_destroy])
+    params.require(:post).permit(:title, :text, category_attributes: [:id, :topic, :_destroy])
   end
 
 end

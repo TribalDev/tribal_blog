@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'pages/about'
   get 'search' => 'posts#search', as: :search
 
+  post '/images/create' => 'images#create'
+
   root 'pages#index'
 
   resources :posts do

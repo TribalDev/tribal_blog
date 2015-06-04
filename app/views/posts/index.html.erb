@@ -3,7 +3,7 @@
 </header>
 
 <% if policy(Post.new).create? %>
-	<%= link_to "New Post", new_post_path, class: 'new-post' %>
+  <%= link_to "New Post", new_post_path, class: 'new-post', data: { no_turbolink: true } %>
 <% end %>
 
 <section class="container">

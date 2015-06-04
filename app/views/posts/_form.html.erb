@@ -1,3 +1,5 @@
+<%= tinymce_assets %>
+
 <%= nested_form_for @post do |f| %>
   <div class="form">
     <% if @post.errors.any? %>
@@ -20,8 +22,8 @@
     </div>
 
     <div class="form-block">
-      <%= f.label :text, class: 'form-input-label' %><br>
-      <%= f.text_area :text, class: 'form-body' %>
+      <%= f.text_area :text, :class => "tinymce", :rows => 40, :cols => 120 %>
+      <%= tinymce plugins: "uploadimage", uploadimage_form_url: "/images/create" %>
     </div>
 
     <div class="form-block">
@@ -34,39 +36,6 @@
       replace, remove or add images:
       <br><br>
     <% end %>
-
-    <div class="form-block">
-      <%= f.fields_for :images do |images_form| %>
-          <%= images_form.file_field :url %>
-          <%= images_form.hidden_field :url_cache %>
-          <%= images_form.hidden_field :post_id %>
-
-          <% if images_form.object.url.thumb.url %>
-            <div class="spacer-small"></div>
-
-            <%= image_tag images_form.object.url.thumb.url, :class => "rounded" %>
-            <br>
-            <small>Embed this image with this markdown in the post:<br>
-              <span class='highlight'>
-                ![img](<%= images_form.object.url %>)
-              </span>
-            </small>
-            <% else %>
-            <br>
-            <small>
-              Upload multiple images by using the 'add an image' button.
-              You can place your images in the next step after submitting your post.
-            </small>
-            <br>
-          <% end %>
-          <div class="spacer-small"></div>
-          <%= images_form.link_to_remove "Remove this image", :class =>"button small-button" %>
-          <br><br>
-          <hr>
-      <% end %>
-      <p> <%= f.link_to_add "Add an image", :images, :class =>"button medium-button" %> </p>
-    </div>
-
     <p class="kd">This form supports Kramdown syntax. <%= link_to 'Kramdown Quick Reference', 'http://kramdown.gettalong.org/quickref.html', target: "_blank" %></p>
 
       <%= f.submit class: "button" %>

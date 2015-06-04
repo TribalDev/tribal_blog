@@ -19,6 +19,8 @@ gem 'mini_magick'
 gem 'fog'
 gem 'figaro'
 gem "nested_form"
+gem 'tinymce-rails'
+gem 'tinymce-rails-imageupload', github: 'PerfectlyNormal/tinymce-rails-imageupload'
 
 group :development, :test do
   gem 'sqlite3'
